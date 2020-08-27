@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Gender</title>
+<script>
+	function gender()
+	{
+		var name=document.getElementById('name').value
+		
+		
+		if(name.startsWith(""))
+		{
+			document.getElementById("check").innerHTML = name+ ' is a boy'
+		}
+		else if(name.endsWith(" "))
+		{
+			document.getElementById("check").innerHTML = name+ ' is a girl'
+		}
+		else 
+		{
+			document.getElementById("check").innerHTML = "its a neutral name"
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<br>
+	<h2>check the gender of the name</h2>
+	<input type="text" placeholder="Enter the name" id='name'>
+	<button onclick="gender()">GO</button>
+	<h2 id="check"></h2>
+</body>
+</html>
